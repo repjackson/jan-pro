@@ -1,15 +1,16 @@
 ## Jan-Pro Customer Incident Reporting and Tracking
 
 ### Tech
-Quasar 0.15.10
-Meteor 1.6.1
-Coffeescript
-Pug
-Stylus
-Vue
+ - Quasar 0.15.10
+ - Meteor 1.6.1
+ - Coffeescript
+ - Pug
+ - Stylus
+ - Vue
+ - Material Design
 
 
-#### Boilerplate Readme Below
+#### Boilerplate Readme
 This is a resource which will show how to install Quasar inside the Meteor framework, with Vue2 also installed.
 First of all, this was forked from **https://github.com/Akryum/meteor-vue2-example-routing**
 and then we added Quasar to that. So thankyou to Akryum for making Meteor work with Vue. - Amazing work.

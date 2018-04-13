@@ -12,7 +12,8 @@
 
 
 #### Boilerplate Readme
-Meteor -> Vue -> Quasar (Coffeescript,pug,stylus)
+Meteor -> Vue -> Quasar (Coffeescript, pug, stylus)
+
 Forked from **https://github.com/Akryum/meteor-vue2-example-routing**
 with added Quasar.
  

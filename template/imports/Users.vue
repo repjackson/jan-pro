@@ -52,8 +52,6 @@
 </template>
 
 <script>
-  import AdminContent from '/imports/ui/components/AdminContent.vue'
-  import AdminSidebar from '/imports/ui/components/AdminSidebar.vue'
   export default {
   	name: 'admin-users',
   	data: () => ({
@@ -92,8 +90,6 @@
       },
     },
     components: {
-      AdminContent,
-      AdminSidebar
     }
   }
 </script>

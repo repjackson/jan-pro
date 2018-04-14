@@ -32,9 +32,7 @@
 </template>
 
 <script>
-  import AdminSidebar from '/imports/ui/components/AdminSidebar.vue';
-  import AdminContent from '/imports/ui/components/AdminContent.vue';
-  import BackButton from '/imports/ui/components/BackButton.vue';
+  import BackButton from '/imports/BackButton.vue';
   export default {
     name: 'admin-documents-new',
     data: () => ({
@@ -90,8 +88,6 @@
       }
     },
     components: {
-      AdminSidebar,
-      AdminContent,
       BackButton
     }
   }

@@ -1,12 +1,7 @@
-<template>
-  <button
-    v-if="canGoBack"
-    @click="goBack"
-    class="button-back">
-    <svg class="icon">
-      <use xlink:href="/icons.svg#arrow-left-alt" />
-    </svg>
-  </button>
+<template lang='pug'>
+  button.button-back(v-if='canGoBack', @click='goBack')
+    svg.icon
+      use(xlink:href='/icons.svg#arrow-left-alt')
 </template>
 
 <script>

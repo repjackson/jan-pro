@@ -1,17 +1,15 @@
-<template>
-  <div class="documents-details">
-    <header>
-    	<back-button></back-button>
-    	<h2>Document Details</h2>
-    </header>
-    <h4>{{ documents[0].title }}</h4>
-    <p>{{ documents[0].body }}</p>
-  </div>
+<template lang='pug'>
+  .documents-details
+    header
+      back-button
+      h2 Document Details
+    h4 {{ documents[0].title }}
+    p {{ documents[0].body }}
 </template>
 
 <script>
-	import BackButton from '/imports/ui/components/BackButton.vue'
-	import Documents from '/imports/ui/api/Documents/documents'
+	import BackButton from '/imports/BackButton.vue'
+	import Documents from '/imports/Documents/documents'
   export default {
     name: 'documents-details',
     data: () => ({

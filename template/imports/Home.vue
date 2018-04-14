@@ -12,7 +12,7 @@
 
 <script lang="coffee">
     import { Meteor } from 'meteor/meteor'
-    import { Stars } from '../lib/collections'
+    import { Stars } from '/imports/lib/collections'
 
     #swap the Comment on these two lines if you want to compile for ios
     import { QList, QListHeader, QBtn, QItem, QItemMain } from '/node_modules/quasar-framework/dist/quasar.mat.common.js'

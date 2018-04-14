@@ -9,8 +9,3 @@
     name: 'admin'
   }
 </script>
-
-<style lang="stylus" scoped>
-.admin-layout
-  text-align center
-</style>

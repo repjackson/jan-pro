@@ -1,41 +1,27 @@
-<template>
-  <admin-content>
-    <admin-sidebar></admin-sidebar>
-    <div class="admin-content_main">
-      <header class="admin-content_main-header is-back-button">
-        <back-button></back-button>
-        <h2 class="title">Documents Edit <small>- {{ editDocument.title }}</small></h2>
-      </header> 
-      <div class="admin-content_main-form">
-        <el-card class="box-card">
-          <el-form :model="editDocument" :rules="rules" ref="editDocument" class="form-model">
-            <el-row :gutter="10">
-              <el-col :lg="24">
-                <el-form-item prop="title">
-                  <el-input placeholder="Please input document title" size="large" v-model="editDocument.title" auto-complete="off"></el-input>
-                </el-form-item>
-              </el-col>
-              <el-col :lg="24">
-                <el-form-item prop="body">
-                  <el-input placeholder="Please input document body" size="large" v-model="editDocument.body" auto-complete="off"></el-input>
-                </el-form-item>
-              </el-col>
-              <el-col :lg="24">
-                <el-button size="large" type="success" @click="handleSubmitForm('editDocument')" class="submit-button full-width">Save</el-button>
-              </el-col>
-            </el-row>
-          </el-form>
-        </el-card>
-      </div>
-    </div>
-  </admin-content>
+<template lang='pug'>
+  div
+    header.admin-content_main-header.is-back-button
+      back-button
+      h2.title
+        | Documents Edit 
+        small - {{ editDocument.title }}
+    .admin-content_main-form
+      q-card.box-card
+        q-form.form-model(:model='editDocument', :rules='rules', ref='editDocument')
+          q-row(:gutter='10')
+            q-col(:lg='24')
+              q-form-item(prop='title')
+                q-input(placeholder='Please input document title', size='large', v-model='editDocument.title', auto-complete='off')
+            q-col(:lg='24')
+              q-form-item(prop='body')
+                q-input(placeholder='Please input document body', size='large', v-model='editDocument.body', auto-complete='off')
+            q-col(:lg='24')
+              q-button.submit-button.full-width(size='large', type='success', @click="handleSubmitForm('editDocument')") Save
 </template>
 
 <script>
-  import AdminSidebar from '/imports/ui/components/AdminSidebar.vue'
-  import AdminContent from '/imports/ui/components/AdminContent.vue'
-  import BackButton from '/imports/ui/components/BackButton.vue'
-  import Documents from '/imports/ui/api/Documents/documents'
+  import BackButton from '/imports/BackButton.vue'
+  import Documents from '/imports/Documents/documents'
   export default {
     name: 'admin-documents-edit',
     data: () => ({
@@ -108,8 +94,6 @@
       },
     },
     components: {
-      AdminSidebar,
-      AdminContent,
       BackButton
     }
   }

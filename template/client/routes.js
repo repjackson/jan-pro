@@ -59,16 +59,16 @@ RouterFactory.configure(factory => {
             name: 'settings',
             component: Settings,
         },
-        {
-            path: '/register',
-            name: 'register',
-            component: Register,
-        },
-        {
-            path: '/login',
-            name: 'login',
-            component: Login,
-        },
+        // {
+        //     path: '/register',
+        //     name: 'register',
+        //     component: Register,
+        // },
+        // {
+        //     path: '/login',
+        //     name: 'login',
+        //     component: Login,
+        // },
           {
             path: '*',
             name: 'not-found',

@@ -4,7 +4,7 @@
       Not Found
     </div>
     <div>
-      This is not the page you are looking for. <router-link :to="{name:'index'}">Return Index</router-link>
+      This is not the page you are looking for. <router-link :to="{name:'home'}">Return Index</router-link>
     </div>
   </div>
 </template>

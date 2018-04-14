@@ -10,8 +10,8 @@
                 q-btn(flat round dense @click='showLeft = !showLeft' icon='menu')
 
                 q-toolbar-title 
-                    |dao
-                    span(slot='subtitle') the way
+                    |Jan-Pro
+                    span(slot='subtitle') Customer Incident Reporting and Tracking
 
                 <!-- showRight is a model attached to right side drawer below -->
                 q-btn(flat round dense icon='sim_card' to='/profile')

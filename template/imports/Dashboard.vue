@@ -1,10 +1,6 @@
-<template>
-  <admin-content>
-    <!--<admin-sidebar></admin-sidebar>-->
-    <div class="admin-content_main">
-      Dashboard Content
-    </div>
-  </admin-content>
+<template lang='pug'>
+  div
+      |Dashboard Content
 </template>
 
 <script>

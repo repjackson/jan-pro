@@ -24,7 +24,7 @@
 <script>
   import { QBtn } from '/node_modules/quasar-framework/dist/quasar.mat.common.js'
 
-  import Documents from '/imports/Documents/documents'
+  import { Documents } from '/imports/Documents/documents'
   export default {
     name: 'admin-documents',
     data: () => ({
@@ -35,7 +35,8 @@
         'documents': [],
       },
       documents() {
-        return Documents.find({})
+        console.log(Documents)
+        // return Documents.find({})
       },
     },
     methods: {

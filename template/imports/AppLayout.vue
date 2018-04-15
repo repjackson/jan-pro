@@ -4,7 +4,7 @@
       q-toolbar(color='dark')
         q-btn(no-ripple flat size='lg' @click='showLeft=!showLeft' icon='menu')
 
-        q-btn(no-ripple flat size='lg' icon='home' @click="$router.push('/')")
+        q-btn(no-ripple flat size='lg' icon='home' @click="$router.push('/admin/dashboard')")
         q-btn(no-ripple flat size='lg' icon='assignment' @click="$router.push('/documents')")
         q-toolbar-title JanPro
           <!--span(slot='subtitle') Customer Incident Reporting and Tracking-->

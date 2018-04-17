@@ -11,7 +11,7 @@ import ActionButton from '/imports/ActionButton.vue'
 import isUser from '/imports/modules/is-user.js'
 
 import NotFound from '/imports/NotFound.vue'
-import Documents from '/imports/Documents.vue'
+import Documents from '/imports/DocTable.vue'
 import DocumentDetails from '/imports/DocumentsDetails.vue'
 // import Index from '/Index.vue'
 import Auth from '/imports/Auth.vue'
@@ -22,8 +22,6 @@ import ResetPassword from '/imports/ResetPassword.vue'
 
 import Admin from '/imports/Admin.vue'
 import AdminDashboard from '/imports/Dashboard.vue'
-import AdminDocuments from '/imports/Documents.vue'
-import AdminDocumentsNew from '/imports/DocumentsNew.vue'
 import AdminDocumentsEdit from '/imports/DocumentsEdit.vue'
 import AdminUsers from '/imports/Users.vue'
 import AdminUsersEdit from '/imports/UsersEdit.vue'
@@ -56,8 +54,7 @@ RouterFactory.configure(factory => {
       // },
       children: [
         { path:'/admin', name:'admin-dashboard', component:Admin },
-        { path:'/admin/documents', name:'admin-documents', component:AdminDocuments },
-        { path:'/admin/documents/new', name:'admin-documents-new', component:AdminDocumentsNew },
+        // { path:'/admin/documents', name:'admin-documents', component:AdminDocuments },
         { path:'/admin/documents/:documentId/edit', name:'admin-documents-edit', component:AdminDocumentsEdit },
         { path:'/admin/users', name:'admin-users', component:AdminUsers },
         { path:'/admin/users/:userId/edit', name:'admin-users-edit', component:AdminUsersEdit }

@@ -9,7 +9,7 @@
 
 <script>
 	import BackButton from '/imports/BackButton.vue'
-	import Documents from '/imports/Documents/documents'
+	import Documents from '/imports/docs/doc_api.js'
   export default {
     name: 'documents-details',
     data: () => ({

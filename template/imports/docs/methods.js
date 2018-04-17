@@ -2,11 +2,11 @@ import { Meteor } from 'meteor/meteor'
 import SimpleSchema from 'simpl-schema'
 import { ValidatedMethod } from 'meteor/mdg:validated-method'
 import rateLimit from '../../modules/rate-limit'
-import Documents from './documents'
+import Docs from './docs'
 
 // Insert Document
 export const insertDocument = new ValidatedMethod({
-  name: 'Documents.methods.insert',
+  name: 'Docs.methods.insert',
   validate: new SimpleSchema({
     createdAt: {
       type: Date,
@@ -27,7 +27,7 @@ export const insertDocument = new ValidatedMethod({
   }).validator(),
   run (doc) {
     try {
-      return Documents.insert({ owner: this.userId, ...doc })
+      return Docs.insert({ owner: this.userId, ...doc })
     } catch (exception) {
       throw new Meteor.Error('500', exception.message)
     }
@@ -36,7 +36,7 @@ export const insertDocument = new ValidatedMethod({
 
 // Update document
 export const updateDocument = new ValidatedMethod({
-  name: 'Documents.methods.update',
+  name: 'Docs.methods.update',
   validate: new SimpleSchema({
     _id: { type: String },
     updatedAt: {
@@ -59,7 +59,7 @@ export const updateDocument = new ValidatedMethod({
   run (doc) {
     try {
       const documentId = doc._id
-      return Documents.update(documentId, {
+      return Docs.update(documentId, {
         $set: {
           updatedAt: new Date(),
           owner: doc.owner,
@@ -75,13 +75,13 @@ export const updateDocument = new ValidatedMethod({
 
 // Remove document
 export const removeDocument = new ValidatedMethod({
-  name: 'Documents.methods.remove',
+  name: 'Docs.methods.remove',
   validate: new SimpleSchema({
     _id: { type: String }
   }).validator(),
   run (id) {
     try {
-      return Documents.remove(id)
+      return Docs.remove(id)
     } catch (exception) {
       throw new Meteor.Error('500', exception.message)
     }
@@ -90,9 +90,9 @@ export const removeDocument = new ValidatedMethod({
 
 rateLimit({
   methods: [
-    'Documents.methods.insert',
-    'Documents.methods.update',
-    'Documents.methods.remove'
+    'Docs.methods.insert',
+    'Docs.methods.update',
+    'Docs.methods.remove'
   ],
   limit: 5,
   timeRange: 1000

@@ -21,7 +21,7 @@
 
 <script>
   import BackButton from '/imports/BackButton.vue'
-  import Documents from '/imports/Documents/documents'
+  import Documents from '/imports/docs/doc_api'
   export default {
     name: 'admin-documents-edit',
     data: () => ({

@@ -21,7 +21,6 @@ akryum:vue-stylus
 static-html
 mobile-experience@1.0.5
 dynamic-import@0.3.0
-ongoworks:security
 insecure@1.0.7
 ecmascript@0.10.0
 akryum:vue-component
